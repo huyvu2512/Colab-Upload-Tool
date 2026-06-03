@@ -9,7 +9,7 @@
 ![Google Drive API](https://img.shields.io/badge/Google%20Drive%20API-4285F4?logo=googledrive&logoColor=white)
 ![YouTube API](https://img.shields.io/badge/YouTube%20Data%20API%20v3-FF0000?logo=youtube&logoColor=white)
 
-🌐 **[Mở trong Colab](https://colab.research.google.com/github/huyvu2512/ColabTube-Uploader/blob/main/youtube_uploader.ipynb)** · 📦 **[GitHub](https://github.com/huyvu2512/ColabTube-Uploader)** · 👤 **[Liên hệ](https://beacons.ai/huyvu2512)**
+🌐 **[Mở trong Colab](https://colab.research.google.com/github/huyvu2512/ColabTube-Uploader/blob/main/ColabTube_Uploader.ipynb)** · 📦 **[GitHub](https://github.com/huyvu2512/ColabTube-Uploader)** · 👤 **[Liên hệ](https://beacons.ai/huyvu2512)**
 
 ---
 
@@ -50,7 +50,7 @@
 
 ## 🖥️ Bắt đầu sử dụng nhanh
 
-> **Chạy ngay trên trình duyệt:** [👉 BẤM VÀO ĐÂY ĐỂ MỞ TRÊN GOOGLE COLAB](https://colab.research.google.com/github/huyvu2512/ColabTube-Uploader/blob/main/youtube_uploader.ipynb)
+> **Chạy ngay trên trình duyệt:** [👉 BẤM VÀO ĐÂY ĐỂ MỞ TRÊN GOOGLE COLAB](https://colab.research.google.com/github/huyvu2512/ColabTube-Uploader/blob/main/ColabTube_Uploader.ipynb)
 
 ### Hướng dẫn các bước:
 1. **Lấy API Key:** Truy cập [Google Cloud Console](https://console.cloud.google.com/), tạo một OAuth 2.0 Client ID (chọn loại ứng dụng "Desktop app" hoặc "Web app") và tải về file `client_secrets.json`. Cần bật **YouTube Data API v3** cho dự án này.
@@ -65,7 +65,7 @@
 
 ```
 ColabTube Uploader/
-├── youtube_uploader.ipynb    # Sổ tay Jupyter chính chạy trên Google Colab
+├── ColabTube_Uploader.ipynb  # Sổ tay Jupyter chính chạy trên Google Colab
 ├── README.md                 # Tài liệu hướng dẫn sử dụng (File bạn đang xem)
 ├── CONTRIBUTING.md           # Hướng dẫn đóng góp mã nguồn
 ├── SECURITY.md               # Chính sách bảo mật
