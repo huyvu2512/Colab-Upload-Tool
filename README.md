@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🚀 Colab Upload Tool
+# 🚀 ColabTube Uploader
 
 **Chuyển trực tiếp video dung lượng lớn từ Google Drive sang YouTube siêu tốc bằng Google Colab.**
 
@@ -9,17 +9,17 @@
 ![Google Drive API](https://img.shields.io/badge/Google%20Drive%20API-4285F4?logo=googledrive&logoColor=white)
 ![YouTube API](https://img.shields.io/badge/YouTube%20Data%20API%20v3-FF0000?logo=youtube&logoColor=white)
 
-🌐 **[Mở trong Colab](https://colab.research.google.com/github/huyvu2512/Colab-Upload-Tool/blob/main/youtube_uploader.ipynb)** · 📦 **[GitHub](https://github.com/huyvu2512/Colab-Upload-Tool)** · 👤 **[Liên hệ](https://beacons.ai/huyvu2512)**
+🌐 **[Mở trong Colab](https://colab.research.google.com/github/huyvu2512/ColabTube-Uploader/blob/main/youtube_uploader.ipynb)** · 📦 **[GitHub](https://github.com/huyvu2512/ColabTube-Uploader)** · 👤 **[Liên hệ](https://beacons.ai/huyvu2512)**
 
 ---
 
 ### 📊 Thống Kê Dự Án
 
-[![Stars](https://img.shields.io/github/stars/huyvu2512/Colab-Upload-Tool?style=flat-square&label=⭐%20Stars&color=FFCC00)](https://github.com/huyvu2512/Colab-Upload-Tool/stargazers)
-[![Forks](https://img.shields.io/github/forks/huyvu2512/Colab-Upload-Tool?style=flat-square&label=🍴%20Forks&color=6e7681)](https://github.com/huyvu2512/Colab-Upload-Tool/forks)
-[![Issues](https://img.shields.io/github/issues/huyvu2512/Colab-Upload-Tool?style=flat-square&label=🐛%20Issues&color=f85149)](https://github.com/huyvu2512/Colab-Upload-Tool/issues)
-[![Last Commit](https://img.shields.io/github/last-commit/huyvu2512/Colab-Upload-Tool?style=flat-square&label=🕐%20Cập%20nhật&color=3fb950)](https://github.com/huyvu2512/Colab-Upload-Tool/commits/main)
-![Visitors](https://visitor-badge.laobi.icu/badge?page_id=huyvu2512.Colab-Upload-Tool&left_text=👁%20Lượt%20xem&left_color=6e7681&right_color=FF0000)
+[![Stars](https://img.shields.io/github/stars/huyvu2512/ColabTube-Uploader?style=flat-square&label=⭐%20Stars&color=FFCC00)](https://github.com/huyvu2512/ColabTube-Uploader/stargazers)
+[![Forks](https://img.shields.io/github/forks/huyvu2512/ColabTube-Uploader?style=flat-square&label=🍴%20Forks&color=6e7681)](https://github.com/huyvu2512/ColabTube-Uploader/forks)
+[![Issues](https://img.shields.io/github/issues/huyvu2512/ColabTube-Uploader?style=flat-square&label=🐛%20Issues&color=f85149)](https://github.com/huyvu2512/ColabTube-Uploader/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/huyvu2512/ColabTube-Uploader?style=flat-square&label=🕐%20Cập%20nhật&color=3fb950)](https://github.com/huyvu2512/ColabTube-Uploader/commits/main)
+![Visitors](https://visitor-badge.laobi.icu/badge?page_id=huyvu2512.ColabTube-Uploader&left_text=👁%20Lượt%20xem&left_color=6e7681&right_color=FF0000)
 
 </div>
 
@@ -50,7 +50,7 @@
 
 ## 🖥️ Bắt đầu sử dụng nhanh
 
-> **Chạy ngay trên trình duyệt:** [👉 BẤM VÀO ĐÂY ĐỂ MỞ TRÊN GOOGLE COLAB](https://colab.research.google.com/github/huyvu2512/Colab-Upload-Tool/blob/main/youtube_uploader.ipynb)
+> **Chạy ngay trên trình duyệt:** [👉 BẤM VÀO ĐÂY ĐỂ MỞ TRÊN GOOGLE COLAB](https://colab.research.google.com/github/huyvu2512/ColabTube-Uploader/blob/main/youtube_uploader.ipynb)
 
 ### Hướng dẫn các bước:
 1. **Lấy API Key:** Truy cập [Google Cloud Console](https://console.cloud.google.com/), tạo một OAuth 2.0 Client ID (chọn loại ứng dụng "Desktop app" hoặc "Web app") và tải về file `client_secrets.json`. Cần bật **YouTube Data API v3** cho dự án này.
@@ -64,7 +64,7 @@
 ## 🏗️ Kiến trúc dự án
 
 ```
-Colab Upload Tool/
+ColabTube Uploader/
 ├── youtube_uploader.ipynb    # Sổ tay Jupyter chính chạy trên Google Colab
 ├── README.md                 # Tài liệu hướng dẫn sử dụng (File bạn đang xem)
 ├── CONTRIBUTING.md           # Hướng dẫn đóng góp mã nguồn
@@ -77,7 +77,7 @@ Colab Upload Tool/
 ## 📬 Liên hệ & đóng góp
 
 - 👤 **Tác giả:** [beacons.ai/huyvu2512](https://beacons.ai/huyvu2512)
-- 🐛 **Bug / Feature:** [Mở Issue](https://github.com/huyvu2512/Colab-Upload-Tool/issues)
+- 🐛 **Bug / Feature:** [Mở Issue](https://github.com/huyvu2512/ColabTube-Uploader/issues)
 - 🤝 **Đóng góp:** Xem [CONTRIBUTING.md](CONTRIBUTING.md)
 - 🔒 **Bảo mật:** Xem [SECURITY.md](SECURITY.md)
 

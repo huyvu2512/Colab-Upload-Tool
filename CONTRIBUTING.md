@@ -1,6 +1,6 @@
 # 🤝 Hướng dẫn đóng góp (Contributing)
 
-Cảm ơn bạn đã quan tâm và muốn đóng góp cho dự án **Colab Upload Tool**! Dưới đây là một số hướng dẫn cơ bản:
+Cảm ơn bạn đã quan tâm và muốn đóng góp cho dự án **ColabTube Uploader**! Dưới đây là một số hướng dẫn cơ bản:
 
 ## 🐛 Báo cáo lỗi (Report Bugs)
 Nếu bạn phát hiện lỗi, vui lòng mở một Issue mới trên GitHub và cung cấp các thông tin sau:
