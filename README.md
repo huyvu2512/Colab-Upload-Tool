@@ -2,11 +2,11 @@
 
 # 🚀 ColabTube Uploader
 
-**Chuyển trực tiếp video dung lượng lớn từ Google Drive sang YouTube siêu tốc bằng Google Colab.**
+**Công cụ đa năng tải video từ mọi nguồn (Drive, YouTube, OK.ru, VK...) và Upload trực tiếp lên YouTube siêu tốc bằng Google Colab.**
 
 ![Python](https://img.shields.io/badge/Python-3.10-3776AB?logo=python&logoColor=white)
 ![Google Colab](https://img.shields.io/badge/Google%20Colab-F9AB00?logo=googlecolab&logoColor=white)
-![Google Drive API](https://img.shields.io/badge/Google%20Drive%20API-4285F4?logo=googledrive&logoColor=white)
+![yt-dlp](https://img.shields.io/badge/yt--dlp-FF0000?logo=youtube&logoColor=white)
 ![YouTube API](https://img.shields.io/badge/YouTube%20Data%20API%20v3-FF0000?logo=youtube&logoColor=white)
 
 🌐 **[Mở trong Colab](https://colab.research.google.com/github/huyvu2512/ColabTube-Uploader/blob/main/ColabTube_Uploader.ipynb)** · 📦 **[GitHub](https://github.com/huyvu2512/ColabTube-Uploader)** · 👤 **[Liên hệ](https://beacons.ai/huyvu2512)**
@@ -29,9 +29,9 @@
 
 > **Dự án này được xây dựng hoàn toàn vì mục đích tiện ích cá nhân và phi lợi nhuận.**
 >
-> - Toàn bộ dữ liệu được truyền tải thông qua **Google Drive API** và **YouTube Data API v3** — API chính thức do Google cung cấp.
+> - Toàn bộ dữ liệu được truyền tải thông qua **Google Drive API**, **yt-dlp** và **YouTube Data API v3**.
 > - Dự án **không** lưu trữ, phân phối lại hay tái bản bất kỳ nội dung video nào.
-> - Mọi nhãn hiệu, thương hiệu, và nội dung liên quan đến YouTube / Google đều thuộc sở hữu của **Google LLC**.
+> - Người dùng tự chịu trách nhiệm về bản quyền nội dung video tải xuống và tải lên.
 
 ---
 
@@ -39,12 +39,12 @@
 
 | Tính năng | Mô tả |
 |---|---|
-| 🚀 **Tốc độ siêu tốc** | Chuyển file giữa máy chủ Google (Drive -> YouTube) với tốc độ lên đến 20-50MB/s |
-| 🛡️ **Vượt rào virus scan** | Tự động bỏ qua cảnh báo quét virus của Google Drive cho các file siêu lớn (>10GB) |
-| 📊 **Thanh tiến trình** | Theo dõi trực tiếp % hoàn thành, tốc độ mạng và thời gian đếm ngược (ETA) |
-| 🔄 **Lưu phiên đăng nhập** | Tự động lưu Token xác thực, không cần đăng nhập lại cho các lần up tiếp theo |
-| 🧹 **Dọn dẹp tự động** | Tự động xoá file trên máy chủ Colab sau khi upload thành công để tránh đầy ổ cứng |
-| 🔗 **Hỗ trợ mọi link Drive** | Nhận diện thông minh cả link chia sẻ dạng ID và dạng URL chuẩn |
+| 🌍 **Hỗ trợ mọi link video** | Tải video từ Google Drive, YouTube, OK.ru, VK, Facebook, TikTok và các link trực tiếp `.mp4`. Tự động nhận diện nguồn tải. |
+| 🚀 **Tốc độ siêu tốc** | Kéo file và up lên YouTube bằng mạng siêu khủng của máy chủ Google (Lên tới 50-100MB/s) |
+| 🎨 **Giao diện thân thiện** | Code phức tạp được giấu gọn gàng đằng sau giao diện Form, toàn bộ quá trình được Việt Hóa 100%. |
+| 🛡️ **Bảo mật & Ổn định** | Tự động xử lý lỗi `MismatchingStateError` của Google, tự động bắt lỗi thiếu quyền API và xoá token hỏng. |
+| 📊 **Thanh tiến trình** | Theo dõi trực tiếp % hoàn thành, tốc độ mạng chuẩn MB/s và thời gian đếm ngược (ETA) siêu trực quan. |
+| 🤖 **Tự động hóa** | Tự động đặt tên tiêu đề theo tên file gốc, tự động dọn rác ổ đĩa Colab sau khi up thành công. |
 
 ---
 
@@ -53,11 +53,13 @@
 > **Chạy ngay trên trình duyệt:** [👉 BẤM VÀO ĐÂY ĐỂ MỞ TRÊN GOOGLE COLAB](https://colab.research.google.com/github/huyvu2512/ColabTube-Uploader/blob/main/ColabTube_Uploader.ipynb)
 
 ### Hướng dẫn các bước:
-1. **Lấy API Key:** Truy cập [Google Cloud Console](https://console.cloud.google.com/), tạo một OAuth 2.0 Client ID (chọn loại ứng dụng "Desktop app" hoặc "Web app") và tải về file `client_secrets.json`. Cần bật **YouTube Data API v3** cho dự án này.
+1. **Lấy API Key:** Truy cập [Google Cloud Console](https://console.cloud.google.com/), tạo một OAuth 2.0 Client ID và tải về file `client_secrets.json`. **Bắt buộc** bật **YouTube Data API v3** cho dự án này.
 2. **Mở Colab:** Bấm vào link trên để mở sổ tay Colab.
-3. **Chạy các ô:** Lần lượt chạy các ô code từ trên xuống dưới bằng nút Play (▶️).
-4. **Tải cấu hình:** Khi được yêu cầu, hãy upload file `client_secrets.json` của bạn lên Colab.
-5. **Dán link Drive & Xác thực:** Nhập link video Google Drive. Lần đầu tiên, tool sẽ yêu cầu bạn cấp quyền truy cập Drive và YouTube. Click vào link, cấp quyền, copy dòng báo lỗi `http://localhost...` dán vào ô nhập liệu để hoàn tất.
+3. **Cài đặt thư viện:** Bấm chạy ô cài đặt đầu tiên.
+4. **Tải cấu hình:** Chạy ô số 2 và upload file `client_secrets.json` của bạn lên Colab.
+5. **Cấu hình & Tải lên:** 
+   - Dán BẤT CỨ đường link video nào vào ô `VIDEO_LINK`.
+   - Bấm ô cuối cùng **🚀 BẤT ĐẦU TẢI VÀ UPLOAD YOUTUBE**. Script sẽ tự động xác thực YouTube, tải video về Colab và đẩy thẳng lên kênh YouTube của bạn!
 
 ---
 
