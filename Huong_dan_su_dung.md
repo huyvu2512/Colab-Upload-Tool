@@ -22,10 +22,10 @@ Do bạn đã có API Client ID (`355324102160-p5931t8lkmg1f3cu9cdm5ujri7u5io3e.
 2. Bấm nút **Connect (Kết nối)** ở góc phải trên cùng.
 3. Chạy lần lượt các ô code (bấm nút hình ▶️ ở góc trái mỗi ô):
    - **Cài thư viện**: Đợi báo thành công.
-   - **Mount Drive**: Cấp quyền cho Colab truy cập vào Google Drive của bạn.
    - **Upload API**: Bấm "Choose Files" và chọn file `client_secrets.json` bạn đã tải ở Bước 1.
-   - **Cấu hình Video**: Điền đường dẫn video trên Drive (ví dụ `/content/drive/MyDrive/video.mp4`), trạng thái (mặc định là `private`). Nếu bạn để trống tiêu đề, nó sẽ tự lấy tên file.
-   - **Upload**: Chạy ô cuối cùng. Nó sẽ yêu cầu bạn click vào link để xác thực. Sau khi làm theo hướng dẫn trên màn hình, video sẽ bắt đầu được chuyển lên YouTube với tốc độ siêu nhanh.
+   - **Cấu hình Video**: Dán trực tiếp **Đường link chia sẻ Google Drive** của video vào ô. Nếu bạn để trống tiêu đề, nó sẽ tự lấy tên file. Trạng thái mặc định là `private`.
+   - **Upload**: Chạy ô cuối cùng. Nó sẽ hiện popup của Colab yêu cầu bạn cấp quyền truy cập Drive (để tải video) và sau đó cấp quyền tải lên YouTube. Sau khi xác thực xong, video sẽ được chuyển lên YouTube với tốc độ siêu nhanh.
+
 
 **Lưu ý:**
 - Vì video được chuyển thẳng từ máy chủ của Google Drive sang Google (YouTube), bạn không cần cắm máy tính. Quá trình tải lên vài GB chỉ mất vài giây đến vài chục giây.
