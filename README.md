@@ -39,12 +39,14 @@
 
 | Tính năng | Mô tả |
 |---|---|
-| 🌍 **Hỗ trợ mọi link video** | Tải video từ Google Drive, YouTube, OK.ru, VK, Facebook, TikTok và các link trực tiếp `.mp4`. Tự động nhận diện nguồn tải. |
+| 🌍 **Hỗ trợ mọi link video** | Tải video từ Google Drive, YouTube, OK.ru, VK, Facebook, TikTok, **Bilibili** và link trực tiếp `.mp4`. Tự động nhận diện nguồn. |
 | 🚀 **Tốc độ siêu tốc** | Kéo file và up lên YouTube bằng mạng siêu khủng của máy chủ Google (Lên tới 50-100MB/s) |
-| 🎨 **Giao diện thân thiện** | Code phức tạp được giấu gọn gàng đằng sau giao diện Form, toàn bộ quá trình được Việt Hóa 100%. |
-| 🛡️ **Bảo mật & Ổn định** | Tự động xử lý lỗi `MismatchingStateError` của Google, tự động bắt lỗi thiếu quyền API và xoá token hỏng. |
-| 📊 **Thanh tiến trình** | Theo dõi trực tiếp % hoàn thành, tốc độ mạng chuẩn MB/s và thời gian đếm ngược (ETA) siêu trực quan. |
-| 🤖 **Tự động hóa** | Tự động đặt tên tiêu đề theo tên file gốc, tự động dọn rác ổ đĩa Colab sau khi up thành công. |
+| 💾 **Sao lưu Google Drive** | Tự động lưu `client_secrets.json` và token vào Drive. Mở lại Colab sẽ tự động khôi phục, không cần cấu hình lại! |
+| 🎨 **Giao diện thân thiện** | Tất cả mã nguồn ẩn mặc định, giao diện Form gọn gàng, Việt Hóa 100%. |
+| 🔄 **Tự động thử lại** | Khi tải video từ nguồn ngoài bị lỗi mạng, script tự động thử lại tới 3 lần thay vì dừng ngay. |
+| 🛡️ **Bảo mật & Ổn định** | Tự động xử lý lỗi `MismatchingStateError`, bắt lỗi thiếu quyền API và xoá token hỏng. |
+| 📊 **Thanh tiến trình** | Theo dõi % hoàn thành, tốc độ chuẩn MB/s và thời gian đếm ngược (ETA) siêu trực quan. |
+| 🤖 **Tự động hóa** | Tự đặt tên tiêu đề theo tên file gốc, tự dọn rác ổ đĩa Colab sau khi up thành công. |
 
 ---
 
@@ -53,13 +55,14 @@
 > **Chạy ngay trên trình duyệt:** [👉 BẤM VÀO ĐÂY ĐỂ MỞ TRÊN GOOGLE COLAB](https://colab.research.google.com/github/huyvu2512/ColabTube-Uploader/blob/main/ColabTube_Uploader.ipynb)
 
 ### Hướng dẫn các bước:
-1. **Lấy API Key:** Truy cập [Google Cloud Console](https://console.cloud.google.com/), tạo một OAuth 2.0 Client ID và tải về file `client_secrets.json`. **Bắt buộc** bật **YouTube Data API v3** cho dự án này.
+1. **Lấy API Key:** Truy cập [Google Cloud Console](https://console.cloud.google.com/), tạo OAuth 2.0 Client ID và tải về `client_secrets.json`. **Bắt buộc** bật **YouTube Data API v3**.
 2. **Mở Colab:** Bấm vào link trên để mở sổ tay Colab.
-3. **Cài đặt thư viện:** Bấm chạy ô cài đặt đầu tiên.
-4. **Tải cấu hình:** Chạy ô số 2 và upload file `client_secrets.json` của bạn lên Colab.
-5. **Cấu hình & Tải lên:** 
-   - Dán BẤT CỨ đường link video nào vào ô `VIDEO_LINK`.
-   - Bấm ô cuối cùng **🚀 BẤT ĐẦU TẢI VÀ UPLOAD YOUTUBE**. Script sẽ tự động xác thực YouTube, tải video về Colab và đẩy thẳng lên kênh YouTube của bạn!
+3. **Cài đặt thư viện:** Chạy ô đầu tiên.
+4. **Kết nối Drive (MỚI!):** Chạy ô **💾 Kết nối Google Drive**. Lần đầu sẽ yêu cầu cấp quyền. Từ lần sau, nó sẽ tự khôi phục cấu hình cũ từ Drive!
+5. **Tải cấu hình:** Upload `client_secrets.json` (chỉ cần lần đầu, lần sau Drive tự khôi phục).
+6. **Cấu hình & Tải lên:**
+   - Dán BẤT CỨ đường link video nào vào ô `VIDEO_LINK` (hỗ trợ cả **Bilibili**).
+   - Bấm **🚀 BẤT ĐẦU TẢI VÀ UPLOAD YOUTUBE**. Xong!
 
 ---
 
